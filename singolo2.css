@@ -141,9 +141,104 @@
     height: 27px;
     width: 16px;
     fill: black;
+    
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
 }
 
 .arrow:hover {
     fill: #ca4549;
 }
 
+.info-section {
+    background-color: #f2f2f2;
+}
+
+.info-section__title {
+    color: #666d89;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 17.86px;
+    padding-top: 63px;
+    margin-bottom: 27px;
+}
+
+.info-section__description {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: lighter;
+    color: #767e9e;
+    margin-bottom: 53px;
+}
+
+.info-section__list {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.info-section__list-item {
+    display: flex;
+    margin-bottom: 37px;
+}
+
+.info-section__list-icon {
+    height: 59px;
+    width: 59px;
+    border: 2px solid #666d89;
+    margin-right: 20px;
+    background: url('/assets/fullsize-sprite.png') no-repeat;
+
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.info-section__list-title {
+    color: #666d89;
+    font-size: 18px;
+    line-height: 17.86px;
+    font-weight: 900;
+    margin-bottom: 14px;
+}
+
+.info-section__list-description {
+    color: #767e9e;
+    line-height: 21.56px;
+    font-size: 12px;
+    max-width: 220px;
+}
+
+.pencil {
+    background-position: 12px 12px; 
+}
+
+.lamp {
+    background-position: -308px 11px;
+}
+
+.heart {
+    background-position: -627px 11px;
+}
+
+.phone {
+    background-position: 12px -112px;
+}
+
+.comment {
+    background-position: -307px -112px;
+}
+
+.star {
+    background-position: -627px -112px; 
+}
+
+.info-section__decorate {
+    background-color: #fff;
+    height: 6px;
+}
