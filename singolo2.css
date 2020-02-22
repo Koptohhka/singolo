@@ -9,8 +9,14 @@
     display: flex;
     width: 940px;
     max-width: 940px;
-    padding: 0 20px;
     margin: 0 auto;
+}
+
+.wrapper {
+    position: relative;
+    width: 940px;
+    max-width: 940px;
+    margin: 0 auto;   
 }
 
 .red-color-style {
@@ -45,6 +51,11 @@
     margin: auto;
 }
 
+.nav__link {
+    text-decoration: none;
+    color: inherit;
+}
+
 .nav__list-item::after {
     content: '';
     display: inline-block;
@@ -70,3 +81,69 @@
     background-color: #323746;
     height: 6px;
 }
+
+.slider-section__background {
+    background-color: #f06c64;
+    height: 594px;
+    display: flex;
+}
+
+.slider-section__wrapper {
+    width: 797px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slider-section__decorative-block {
+    background-color: #ea676b;
+    height: 6px;
+}
+
+.slider-section__image-one {
+    background: url('/assets/phone-vertical.png') no-repeat;
+    height: 483px;
+    width: 240px;
+    position: absolute;
+    top: 53px;
+}
+
+.slider-section__image-two {
+    background: url('/assets/phone-horizontal.png') no-repeat;
+    height: 240px;
+    width: 484px;
+    position: absolute;
+    top: 174px;
+    left: 313px;
+}
+
+.slider-section__slider-left {
+    display: inline-block;
+    position: absolute;
+    top: 281px;
+    cursor: pointer;
+}
+
+.slider-section__slider-right {
+    display: inline-block;
+    position: absolute;
+    top: 281px;
+    left: 924px;
+    cursor: pointer;
+
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
+.arrow {
+    height: 27px;
+    width: 16px;
+    fill: black;
+}
+
+.arrow:hover {
+    fill: #ca4549;
+}
+
