@@ -110,6 +110,7 @@
     width: 240px;
     position: absolute;
     top: 53px;
+    left: 1px;
 }
 
 .slider-section__image-two {
@@ -118,7 +119,7 @@
     width: 484px;
     position: absolute;
     top: 174px;
-    left: 313px;
+    left: 314px;
 }
 
 .slider-section__slider-left {
@@ -191,7 +192,7 @@
 
 .info-section__list-item {
     display: flex;
-    margin-bottom: 28px;
+    margin-bottom: 31px;
 }
 
 .info-section__list-item:not(.test-class) {
@@ -203,6 +204,7 @@
     width: 59px;
     border: 2px solid #666d89;
     margin-right: 20px;
+    margin-top: 2px;
     background: url('assets/fullsize-sprite.png') no-repeat;
 
     border-radius: 50%;
@@ -217,7 +219,7 @@
     font-size: 18px;
     line-height: 17.86px;
     font-weight: 900;
-    margin-bottom: 11px;
+    margin-bottom: 10px;
 }
 
 .info-section__list-description {
@@ -229,11 +231,11 @@
 }
 
 .pencil {
-    background-position: 12px 12px; 
+    background-position: 12px 11px; 
 }
 
 .lamp {
-    background-position: -308px 11px;
+    background-position: -307px 11px;
 }
 
 .heart {
