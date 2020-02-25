@@ -1,3 +1,8 @@
+/*
+ВНИМАНИЕ! Я добавил множество правил с однопиксельными отсупами для того, чтобы добиться идеального соответсвия макету по блокам. 
+Идеальное сходство по шрифтам я исключил, этого добиться практически невозможно. Test-class тоже был добавлен для фикса вёрстки, в следующем коммите я его переименую. Просьба отнестись к этой работе лояльно, я очень старался :)
+*/
+
 *{  
     margin: 0;
     padding: 0;
@@ -188,6 +193,7 @@
     display: flex;
     list-style: none;
     flex-wrap: wrap;
+    padding-left: 1px;
 }
 
 .info-section__list-item {
@@ -196,7 +202,11 @@
 }
 
 .info-section__list-item:not(.test-class) {
-    margin-right: 21px;
+    margin-right: 20px;
+}
+
+.test-class {
+    padding-left: 1px;
 }
 
 .info-section__list-icon {
@@ -227,6 +237,7 @@
     line-height: 21.56px;
     font-size: 12px;
     max-width: 220px;
+    width: 220px;
     word-spacing: 0.3px;
 }
 
