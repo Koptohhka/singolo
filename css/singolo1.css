@@ -110,7 +110,7 @@
 }
 
 .slider-section__image-one {
-    background: url('assets/phone-vertical.png') no-repeat;
+    background: url('../assets/phone-vertical.png') no-repeat;
     height: 483px;
     width: 240px;
     position: absolute;
@@ -119,7 +119,7 @@
 }
 
 .slider-section__image-two {
-    background: url('assets/phone-horizontal.png') no-repeat;
+    background: url('../assets/phone-horizontal.png') no-repeat;
     height: 240px;
     width: 484px;
     position: absolute;
@@ -215,7 +215,7 @@
     border: 2px solid #666d89;
     margin-right: 20px;
     margin-top: 2px;
-    background: url('assets/fullsize-sprite.png') no-repeat;
+    background: url('../assets/fullsize-sprite.png') no-repeat;
 
     border-radius: 50%;
     -webkit-border-radius: 50%;
