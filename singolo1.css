@@ -69,6 +69,10 @@
     color: inherit;
 }
 
+.nav__list-item:hover {
+    text-decoration: underline;
+}
+
 .nav__list-item::after {
     content: '';
     display: inline-block;
@@ -274,16 +278,20 @@
     height: 6px;
 }
 
-@media (max-width: 590px) {
+@media (max-width: 576px) {
     .header-container {
-        width: 350px;
-        max-width: 350px;
+        width: 400px;
+        max-width: 400px;
         margin: 0 auto;
     }
 
+    .header__logo {
+        margin-bottom: 37px;
+    }
+
     .wrapper {
-        width: 350px;
-        max-width: 350px;
+        width: 400px;
+        max-width: 400px;
     }
 
     /*Бургер-кнопка*/
@@ -365,7 +373,7 @@
         left: 0;
         width: auto;
         height: auto;
-        font-size: 19px;
+        font-size: 13px;
         transition: 1s;
         -webkit-transition: 1s;
         -moz-transition: 1s;
@@ -379,6 +387,10 @@
         margin-bottom: 10px;
     }
 
+    .nav__list-item::after {
+        display: none;
+    }
+
     .slider-section__wrapper {
         width: 350px;
         max-width: 350px;
@@ -386,17 +398,17 @@
 
     .slider-section__image-one {
         left: 105px;
-        background-size: 70%;
+        background-size: 140px;
         width: 200px;
-        height: 350px;
+        height: 300px;
     }
 
     .slider-section__image-two {
-        background-size: 70%;
+        background-size: 280px;
         top: 380px;
         left: 50px;
-        width: 350px;
-        height: 200px;
+        width: 280px;
+        height: 140px;
     }
 
     .slider-section__slider-right {
