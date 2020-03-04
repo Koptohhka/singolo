@@ -17,24 +17,30 @@
     padding-top: 64px;
 }
 
-.main__title {
+.second-level-title {
     font-size: 30px;
     line-height: 17.86px;
     font-weight: 900;
-    margin-bottom: 27px;
     color: #666d89;
 }
 
-.main__description {
+.main__title {
+    margin-bottom: 27px;
+}
+
+.section-description {
     font-size: 18px;
     line-height: 30px;
     font-weight: 300;
-    margin-bottom: 10px;
+    color: #767e9e;
+}
+
+.main__description {
+    margin-bottom: 11px;
 }
 
 .main__nav {
     font-size: 12px;
-    line-height: 21.56px;
     font-weight: normal;
     margin-bottom: 19px;
 }
@@ -43,18 +49,17 @@
     list-style: none;
     display: flex;
     justify-content: space-between;
-    width: 287px;
-    max-width: 290px;
+    width: 288px;
 }
 
 .nav-list__list-item {
     border: 1px solid #666d89;
-    padding: 0px 6px;
-    border-radius: 4px 4px 4px 4px;
-    -webkit-border-radius: 4px 4px 4px 4px;
-    -moz-border-radius: 4px 4px 4px 4px;
-    -ms-border-radius: 4px 4px 4px 4px;
-    -o-border-radius: 4px 4px 4px 4px;
+    padding: 2.5px 6px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
 .nav-list__list-item:hover {
@@ -71,11 +76,12 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 47px;
 }
 
 .image-list__list-item {
     margin-right: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 17px;
 }
 
 .main__image-list .image-list__list-item:nth-child(4n) {
@@ -85,4 +91,68 @@
 .main__bottom-decoration {
     background-color: #323746;
     height: 6px;
+}
+
+.about-us {
+    background-color: #f2f2f2;
+    padding-top: 68px;
+}
+
+.about-us__title {
+    margin-bottom: 27px;
+}
+
+.about-us__description {
+    margin-bottom: 45px;
+}
+
+.about-us__images-container {
+
+}
+
+.images-container__list {
+    list-style: none;
+    display: flex;
+}  
+
+.images-container__list-item {
+    width: 300px;
+    max-width: 300px;
+}
+
+.images-container__list-item:first-child {
+    margin-right: 19px;
+}
+
+.images-container__list-item:nth-child(2) {
+    margin-right: 21px;
+}
+
+.images-container__image {
+    margin-bottom: 12px;
+}
+
+.third-level-title {
+    font-weight: 900;
+    font-size: 18px;
+    color: #666d89;
+    line-height: 17,86px;
+}
+
+.images-container__title {
+    margin-bottom: 11px;
+}
+
+.images-container__description {
+    color: #767e9e;
+    font-size: 12px;
+    line-height: 21,56px;
+}
+
+.images-container__contacts-container {
+
+}
+
+.contacts-container__list {
+    list-style: none;
 }
