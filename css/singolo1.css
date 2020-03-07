@@ -323,27 +323,27 @@
     word-spacing: 0.3px;
 }
 
-.pencil {
+.info-section__list-icon--pencil {
     background-position: 12px 11px; 
 }
 
-.lamp {
+.info-section__list-icon--lamp {
     background-position: -307px 11px;
 }
 
-.heart {
+.info-section__list-icon--heart {
     background-position: -627px 11px;
 }
 
-.phone {
+.info-section__list-icon--phone {
     background-position: 12px -112px;
 }
 
-.comment {
+.info-section__list-icon--comment {
     background-position: -307px -112px;
 }
 
-.star {
+.info-section__list-icon--star {
     background-position: -627px -112px; 
 }
 
