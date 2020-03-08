@@ -155,7 +155,7 @@
 .arrow {
     height: 32px;
     width: 22px;
-    fill: black;
+    fill: #ca4549; 
     
     transition: 0.2s;
     -webkit-transition: 0.2s;
@@ -165,7 +165,7 @@
 }
 
 .arrow:hover {
-    fill: #ca4549;
+    fill: black;
 }
 
 .info-section {
@@ -562,6 +562,33 @@
     color: inherit;
     text-decoration: inherit;
     display: block;
+    font-style: normal;
+}
+
+.form-container__decorative-image {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: 4px;
+    left: 3px;
+    margin-right: 6px;
+}
+
+.form-container__decorative-image--location {
+    background: url('../assets/location.png') no-repeat;
+}
+
+.form-container__decorative-image--phone {
+    background: url('../assets/phone.png') no-repeat;
+    top: 3px;
+    left: 1px;
+}
+
+.form-container__decorative-image--mail {
+    background: url('../assets/mail.png') no-repeat;
+    top: 7px;
+    left: 0px;
 }
 
 .form-article__decoration-block {
