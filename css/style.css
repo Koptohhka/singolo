@@ -62,7 +62,7 @@
 .nav__link {
     text-decoration: none;
     color: inherit;
-    
+
     transition: 0.3s;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
@@ -495,7 +495,7 @@
 .main-form__form-group {
     border: none;
     margin-right: 20px;
-    margin-bottom: 67px;
+    margin-bottom: 21px;
 
     width: 620px;
 }
@@ -519,6 +519,30 @@
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
+}
+
+.main-form__button {
+    width: 100px;
+    height: 30px;
+    border: none;
+    background-color: #d6564f;
+    color: #f48c8f;
+    
+    transition: 0.3s;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.main-form__button:hover {
+    cursor: pointer;
+    background-color: #ad3630;
 }
 
 /*placeholder-selectors*/
