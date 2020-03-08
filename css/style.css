@@ -35,7 +35,7 @@
 .header__logo {
     font-weight: bold;
     font-size: 25px;
-    margin-top: 33px;
+    margin-top: 29px;
     margin-bottom: 30px;
     letter-spacing: -0.3px;
 }
@@ -49,80 +49,6 @@
     letter-spacing: -0.3px;
 }
 
-/*burger-button start*/
-.nav__burger-button {
-    display: none;
-}
-
-.nav__burger-container {
-    width: 47px;
-    height: 40px;
-    position: relative;
-    top: 25px;
-    cursor: pointer;
-    
-    display: none;
-}
-
-.nav__burger-button {
-    display: block;
-    position: relative;
-    top: 22px;
-    right: 0px;
-    width: 47px;
-    height: 4px;
-    background-color: white;
-}
-
-.nav__burger-button::after,
-.nav__burger-button::before {
-    content: '';
-    display: block;
-    background-color: white;
-    width: 47px;
-    height: 4px;
-    position: relative;
-    transition: 0.3s;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-}
-
-.nav__burger-button::after {
-    top: 6px;
-}
-
-.nav__burger-button::before {
-    top: -10px;
-}
-
-.burger-active {
-    width: 0;
-    height: 0;
-}
-
-.burger-active::after {
-    top: -2px;
-
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-}
-
-.burger-active::before {
-    top: 1px;
-
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-}
-/*burger-button end*/
-
 .nav__list {
     width: 371px;
     display: flex;
@@ -130,7 +56,7 @@
     list-style: none;
     text-transform: uppercase;
     line-height: 6.32px;
-    margin-top: 49px;
+    margin-top: 46px;
 }
 
 .nav__link {
@@ -138,7 +64,7 @@
     color: inherit;
 }
 
-.nav__list-item:hover {
+.nav__link:hover {
     text-decoration: underline;
 }
 
@@ -319,6 +245,8 @@
     line-height: 21.56px;
     font-size: 12px;
     max-width: 220px;
+    max-height: 65px;
+    overflow: hidden;
     width: 220px;
     word-spacing: 0.3px;
 }
