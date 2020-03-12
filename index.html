@@ -34,10 +34,15 @@
             <div class="slider-section__background">
                 <div class="wrapper">
                     <div class="slider-section__wrapper">
-                        <div class="slider-section__image-one"></div>
-                        <div class="slider-section__image-two"></div>
+                        <div id="slide-one">
+                            <div class="slider-section__image-one"></div>
+                            <div class="slider-section__image-two"></div>
+                        </div>
+                        <div id="slide-two" style="opacity: 0;">
+                            <div class="slider-section__image-one--second-slide"></div>
+                        </div>
                     </div>
-                    <div class="slider-section__slider-left">
+                    <div class="slider-section__slider-left" id="row-left">
                         <svg class="arrow" fill="" aria-hidden="true" focusable="false" data-prefix="fas"
                             data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
@@ -46,7 +51,7 @@
                             </path>
                         </svg>
                     </div>
-                    <div class="slider-section__slider-right">
+                    <div class="slider-section__slider-right" id="row-right">
                         <svg class="arrow" fill="" aria-hidden="true" focusable="false" data-prefix="fas"
                             data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
@@ -282,7 +287,7 @@
                                 <textarea class="main-form__text-input main-form__text-input--textarea"
                                     placeholder="Describe your project in detail..." name="user-comment" id="" cols="30"
                                     rows="8"></textarea>
-                                    <button class="main-form__button">Submit</button>
+                                <button class="main-form__button">Submit</button>
                             </fieldset>
                         </form>
                         <div class="form-container__contacts-container">
@@ -331,6 +336,7 @@
         </div>
     </footer>
 
+    <script src="scripts/script.js"></script>
 </body>
 
 </html>
