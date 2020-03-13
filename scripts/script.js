@@ -1,5 +1,5 @@
 (() => {
-    let SLIDER_COLORS = {
+    const SLIDER_COLORS = {
         BLUE: '#648BF0',
         RED: '#f06c64'
     }
@@ -54,18 +54,20 @@
     sliderImageTwo.addEventListener('click', toColorHorizontal);
 
     //portfolio start
-    const testArr = document.querySelectorAll('.image-list__list-item');
+    const imagesArr = document.querySelectorAll('.image-list__list-item');
     const portfolioNav = document.querySelectorAll('.portoflio-section__list-item');
-
+    const borderClass = 'image-list__image--border';
+    
     let toReversImages = (evt) => {
         evt.preventDefault();
-        let tess = '';
-        testArr.forEach((it, i, arr) => {
+
+        let firstImageSrc = '';
+        imagesArr.forEach((it, i, arr) => {
             if (i === 0) {
-                tess = it.querySelector('img').src;
+                firstImageSrc = it.querySelector('img').src;
             } 
             if (i === arr.length - 1) {
-                it.querySelector('img').src = tess;
+                it.querySelector('img').src = firstImageSrc;
             } else {
                 it.querySelector('img').src = arr[i + 1].querySelector('img').src;
             }      
@@ -73,10 +75,25 @@
         });
     }
 
-
+    let toBorder = (it) => {
+        //
+    }
 
     portfolioNav.forEach((it) => {
         it.addEventListener('click', toReversImages);
-    });    
+    });
+
+    imagesArr.forEach((it) => {
+        it.addEventListener('click', () => {
+            
+            imagesArr.forEach((it2) => {
+                if (it2.querySelector('img').classList.contains(borderClass)) {
+                    it2.querySelector('img').classList.remove(borderClass);
+                }
+            });
+            it.querySelector('img').classList.add(borderClass);
+            
+        });
+    });   
 }) ()
 
