@@ -54,36 +54,61 @@
     sliderImageTwo.addEventListener('click', toColorHorizontal);
 
     //portfolio start
-    const imagesArr = document.querySelectorAll('.image-list__list-item');
-    const portfolioNav = document.querySelectorAll('.portoflio-section__list-item');
-    const borderClass = 'image-list__image--border';
-    
-    let toReversImages = (evt) => {
+    const portfolioTabs = document.querySelector('.portoflio-section__list');
+    const imagesListItem = document.querySelectorAll('.image-list__list-item');
+    const imageList = document.querySelector('.portoflio-section__image-list');
+    ///////////////////////////////////////////////////////////
+    let imagesAnimation = (evt) => {
         evt.preventDefault();
-
-        let firstImageSrc = '';
-        imagesArr.forEach((it, i, arr) => {
-            if (i === 0) {
-                firstImageSrc = it.querySelector('img').src;
-            } 
-            if (i === arr.length - 1) {
-                it.querySelector('img').src = firstImageSrc;
-            } else {
-                it.querySelector('img').src = arr[i + 1].querySelector('img').src;
-            }      
-            
-        });
+        (() => {
+            imagesListItem.forEach((it, i, arr) => {
+                it.style.transform = 'scale(0)';
+            });
+        }) ()
+    
+        let animationEnd = () => {
+            imagesListItem.forEach((it, i, arr) => {
+                it.style.transform = 'scale(1)'; 
+            });
+        }
+        setTimeout(toReversImages, 200);
+        setTimeout(animationEnd, 400, evt);
     }
 
-    let toBorder = (it) => {
-        //
-    }
-
-    portfolioNav.forEach((it) => {
-        it.addEventListener('click', toReversImages);
+    let toReversImages = (evt) => {
+        let imagesListItemTest = document.querySelectorAll('.image-list__list-item');
+        let removableItem = imagesListItemTest[0];
+        imageList.appendChild(removableItem);
+    };
+    /////////////////////////////////////////////////////////////////
+    portfolioTabs.addEventListener('click', (evt) => {
+        if (evt.target.classList.contains('portoflio-section__link')) {
+            imagesAnimation(evt);
+            //setTimeout(toReversImages, 600, evt);
+        }
     });
 
-    imagesArr.forEach((it) => {
+    let toAddBorder = (targetElement) => {
+        imagesListItem.forEach((it) => {
+            if (it.querySelector('img').classList.contains('image-list__image--border')) {
+                it.querySelector('img').classList.remove('image-list__image--border');
+            }
+        });
+        targetElement.classList.add('image-list__image--border');
+    }
+    
+    imageList.addEventListener('click', (evt) => {
+        if (evt.target.classList.contains('image-list__image')) {
+            toAddBorder(evt.target);
+        }
+    });
+
+}) ()
+
+
+/**
+
+imagesList.forEach((it) => {
         it.addEventListener('click', () => {
             
             imagesArr.forEach((it2) => {
@@ -94,6 +119,6 @@
             it.querySelector('img').classList.add(borderClass);
             
         });
-    });   
-}) ()
+    });
 
+*/
