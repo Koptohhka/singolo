@@ -4,35 +4,61 @@
         RED: '#f06c64'
     }
     
-    const sliderBackground = document.querySelector('.slider-section__background');
     const slideOne = document.getElementById('slide-one');
     const slideTwo = document.getElementById('slide-two');
-    const rowLeft = document.getElementById('row-left');
-    const rowRight = document.getElementById('row-right');
-    let flag = true;
 
     //slider
-    let toSlide = () => {
-        if (flag) {
-            sliderBackground.style.backgroundColor = SLIDER_COLORS.BLUE;
-            slideOne.style.display = 'none';
-            slideTwo.style.display = 'block';
-            //slideOne.style.opacity = '0';
-            //slideTwo.style.opacity = '1';
-            flag = false;
-        } else {
-            sliderBackground.style.backgroundColor = SLIDER_COLORS.RED;
-            //slideOne.style.opacity = '1';
-            //slideTwo.style.opacity = '0';
-            slideOne.style.display = 'block';
-            slideTwo.style.display = 'none';
-            flag = true;
-        }
+    const rowLeft = document.getElementById('row-left');
+    const rowRight = document.getElementById('row-right');
+
+    let sliderItems = document.querySelectorAll('.slider-section__slider-item');
+    let currentItem = 0;
+    let isEnabled = true;
+
+    function changeCurrentItem(num) {
+        currentItem = (num + sliderItems.length) % sliderItems.length;
     }
 
-    rowLeft.addEventListener('click', toSlide);
-    rowRight.addEventListener('click', toSlide);
+    function hideItem(direction) {
+        isEnabled = false;
+        sliderItems[currentItem].classList.add(direction);
+        sliderItems[currentItem].addEventListener('animationend',function() {
+            this.classList.remove('slider-section__slider-item--active', direction);
+        })
+    }
 
+    function showItem(direction) {
+        sliderItems[currentItem].classList.add('slider-section__slider-item--next', direction);
+        sliderItems[currentItem].addEventListener('animationend',function() {
+            this.classList.remove('slider-section__slider-item--next', direction);
+            this.classList.add('slider-section__slider-item--active');
+            isEnabled = true;
+        })
+    }
+
+    function previousItem(num) {
+        hideItem('slider-section__slider-item--to-right');
+        changeCurrentItem(num - 1);
+        showItem('slider-section__slider-item--from-right');
+    }
+
+    function nextItem(num) {
+        hideItem('slider-section__slider-item--to-left');
+        changeCurrentItem(num + 1);
+        showItem('slider-section__slider-item--from-left');
+    }
+
+    rowLeft.addEventListener('click', function() {
+        if (isEnabled) {
+            previousItem(currentItem);
+        }
+    });
+
+    rowRight.addEventListener('click', () => {        /////////
+        if (isEnabled) {
+            nextItem(currentItem);
+        }
+    });
     //phone-activate
 
     const sliderImageOne = document.querySelector('.slider-section__image-one');
@@ -40,13 +66,13 @@
 
     let toColorVertical = (evt) => {
         if (evt.offsetX <= 215 && evt.offsetY <= 458) {
-            sliderImageOne.firstChild.classList.add('black-vertical');
+            sliderImageOne.querySelector('div').classList.add('black-vertical');
         }
     }
 
     let toColorHorizontal = (evt) => {
         if (evt.offsetX <= 458 && evt.offsetY <= 215) {
-            sliderImageTwo.firstChild.classList.add('black-horizontal');
+            sliderImageTwo.querySelector('div').classList.add('black-horizontal');
         }
     }
 
@@ -103,22 +129,50 @@
         }
     });
 
+    //form
+    const formButton = document.querySelector('.main-form__button');
+    const tt = document.querySelector('.form-container__main-form');
+
+    let renderFeedbackElement = (evt) => {
+        evt.preventDefault();
+
+        let subject = document.getElementById('subject').value;
+        let describeValue = document.getElementById('Describe').value;
+        let describe = `Описание: ${describeValue}`;
+        if (describeValue === '') {
+            describe = 'Без описания';
+        }
+        console.log();
+        let element = 
+        `<div class="popup-shadow">
+        <div class="popup">
+        <p>Письмо отправлено</p>
+        <p>Тема: ${subject}</p>
+        <p>${describe}</p>
+        <button class="popup__button">ОК</button>
+        </div>
+        </div>`;
+
+        document.body.insertAdjacentHTML('afterbegin', element);
+
+        let popupButton = document.querySelector('.popup__button');
+
+        let closePopup = () => {
+            let popup = document.querySelector('.popup-shadow');
+            popup.remove();
+        }
+
+        popupButton.addEventListener('click', closePopup);
+        document.addEventListener('click', (evt) => {
+            if (!evt.target.classList.contains('popup')) {
+                closePopup(); 
+            }
+        });
+    }
+
+    //tt.addEventListener('click', renderFeedbackElement)
+    tt.addEventListener('submit', renderFeedbackElement)
+
 }) ()
 
 
-/**
-
-imagesList.forEach((it) => {
-        it.addEventListener('click', () => {
-            
-            imagesArr.forEach((it2) => {
-                if (it2.querySelector('img').classList.contains(borderClass)) {
-                    it2.querySelector('img').classList.remove(borderClass);
-                }
-            });
-            it.querySelector('img').classList.add(borderClass);
-            
-        });
-    });
-
-*/
