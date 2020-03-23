@@ -30,39 +30,61 @@
     </header>
 
     <main class="main">
+
         <section class="slider-section">
             <a class="anchor" name="home"></a>
-            <div class="slider-section__background">
-                <div class="wrapper">
-                    <div class="slider-section__wrapper">
-                        <div id="slide-one">
-                            <div class="slider-section__image-one"><div></div></div>
-                            <div class="slider-section__image-two"><div></div></div>
-                        </div>
-                        <div id="slide-two" style="display: none;">
-                            <div class="slider-section__image-one--second-slide"></div>
+
+
+            <div class="slider-section__test-wrapper">
+
+                <div  id="slide-one" class="slider-section__slider-item slider-section__slider-item--active slider-section__slider-item--first-slide">
+                    <div class="wrapper">
+                        <div class="slider-section__wrapper">
+                            <div>
+                                <div class="slider-section__image-one">
+                                    <div></div>
+                                </div>
+                                <div class="slider-section__image-two">
+                                    <div></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="slider-section__slider-left" id="row-left">
-                        <svg class="arrow" fill="" aria-hidden="true" focusable="false" data-prefix="fas"
-                            data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img"
-                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                            <path
-                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z">
-                            </path>
-                        </svg>
-                    </div>
-                    <div class="slider-section__slider-right" id="row-right">
-                        <svg class="arrow" fill="" aria-hidden="true" focusable="false" data-prefix="fas"
-                            data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img"
-                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                            <path
-                                d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z">
-                            </path>
-                        </svg>
+                </div>
+
+                <div  id="slide-two" class="slider-section__slider-item slider-section__slider-item--second-slide">
+                    <div class="wrapper">
+                        <div class="slider-section__wrapper">
+                            <div id="slide-two">
+                                <div class="slider-section__image-one--second-slide"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+
+            <div class="slider-section__slider-left" id="row-left">
+                <svg class="arrow" fill="" aria-hidden="true" focusable="false" data-prefix="fas"
+                    data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                    <path
+                        d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z">
+                    </path>
+                </svg>
+            </div>
+            <div class="slider-section__slider-right" id="row-right">
+                <svg class="arrow" fill="" aria-hidden="true" focusable="false" data-prefix="fas"
+                    data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                    <path
+                        d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z">
+                    </path>
+                </svg>
+
+            </div>
+            <!--Тутай конец тест врапера-->
+
             <div class="slider-section__decorative-block"></div>
         </section>
 
@@ -284,8 +306,8 @@
                                     placeholder="Name (Required)" required>
                                 <input class="main-form__text-input" type="email" name="email"
                                     placeholder="Email (Required)" required>
-                                <input class="main-form__text-input" type="text" name="subject" placeholder="Subject">
-                                <textarea class="main-form__text-input main-form__text-input--textarea"
+                                <input class="main-form__text-input" type="text" id="subject" name="subject" placeholder="Subject">
+                                <textarea id="Describe" class="main-form__text-input main-form__text-input--textarea"
                                     placeholder="Describe your project in detail..." name="user-comment" id="" cols="30"
                                     rows="8"></textarea>
                                 <button class="main-form__button">Submit</button>
