@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Lato', 'sans-serif';
     scroll-behavior: smooth;
+    text-align: justify;
 }
 
 .anchor {
@@ -34,15 +35,15 @@
 
 .header-container {
     display: flex;
-    width: 940px;
-    max-width: 940px;
+    width: 980px;
+    padding: 0 20px;
     margin: 0 auto;
 }
 
 .wrapper {
     position: relative;
-    width: 940px;
-    max-width: 940px;
+    width: 980px;
+    padding: 0 20px;
     margin: 0 auto;
 }
 
@@ -540,7 +541,7 @@
 
 }
 
-.portoflio-section__image-list .image-list__list-item:nth-child(4n) {
+.image-list__list-item:nth-child(4n) {
     margin-right: 0;
     overflow: hidden;
 }
@@ -677,8 +678,6 @@
     border: none;
     margin-right: 20px;
     margin-bottom: 21px;
-
-    width: 620px;
 }
 
 .main-form__text-input {
@@ -929,4 +928,77 @@
     border: none;
     margin: 0 auto;
     cursor: pointer;
+}
+
+@media (max-width: 1020px) and (min-width: 768px) {
+    .header-container {
+        width: 100%;
+    }
+
+    .wrapper {
+        width: 750px;
+    }
+
+    .slider-section__wrapper {
+        
+    }
+
+    
+
+    .slider-section__image-two {
+        height: 100%;
+        width: 200;
+    }
+
+    .info-section__list-item {
+        margin: 0;
+    }
+
+    .info-section__list-item {
+        margin-bottom: 50px;
+    }
+
+    .info-section__list-item:nth-child(2n+1) {
+        
+        margin-right: auto;
+    }
+
+    .portoflio-section__image-list .image-list__list-item {
+        margin: 0px;
+    }
+
+    .portoflio-section__image-list .image-list__list-item {
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    .image-list__list-item:nth-child(3n) {
+        margin-right: 0px;
+    }
+
+   .images-container__list {
+        width: 100%;
+   }
+
+   .images-container__list-item {
+       
+   }
+
+   .images-container__image {
+        width: 218px;
+   }
+   
+   .main-form__text-input {
+       width: 442px;
+   }
+
+   .form-article__form-container {
+        column-gap: 10px;
+   }
+}
+
+@media (max-width: 767.999px) {
+    .wrapper {
+
+    }
 }
