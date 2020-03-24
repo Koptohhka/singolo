@@ -16,6 +16,10 @@
     height: 10px;
 }
 
+.anchor--slider-section {
+    top: 0px;
+}
+
 .hidden {
     display: none;
 }
@@ -89,9 +93,12 @@
     -o-transition: 0.3s;
 }
 
+.nav__link--active {
+    color: #f06c64  
+}
+
 .nav__link:hover {
     text-decoration: underline;
-    color: #f06c64;
 }
 
 .nav__list-item::after {

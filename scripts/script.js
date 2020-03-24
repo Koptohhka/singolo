@@ -1,12 +1,100 @@
 (() => {
-    const SLIDER_COLORS = {
-        BLUE: '#648BF0',
-        RED: '#f06c64'
-    }
-    
-    const slideOne = document.getElementById('slide-one');
-    const slideTwo = document.getElementById('slide-two');
+    /*
+    const navListItems = document.querySelectorAll('.nav__list-item');
 
+    const sliderAnchor = document.querySelector('.slider-section');
+    const infoAnchor = document.querySelector('.info-section');
+    const portfolioAnchor = document.querySelector('.portoflio-section');
+    const aboutUsAnchor = document.querySelector('.about-us-section');
+    const formAnchor = document.querySelector('.form-section');
+    const navItemActive = 'nav__link--active';
+
+    function removeActiveAttribute() {
+        navListItems.forEach((it) => {
+            it.querySelector('.nav__link').classList.remove(navItemActive);
+        })
+    }
+
+    document.addEventListener('scroll', (evt)=> {
+        console.log(portfolioAnchor.offsetTop);
+        //console.log(formAnchor.getBoundingClientRect());
+
+        if (sliderAnchor.getBoundingClientRect().top < 100 && aboutUsAnchor.getBoundingClientRect().top > -500) {
+            removeActiveAttribute();
+            navListItems[0].querySelector('.nav__link').classList.add(navItemActive);
+        }
+
+        if (infoAnchor.getBoundingClientRect().top < 100 && infoAnchor.getBoundingClientRect().top > -420) {
+            removeActiveAttribute();
+            navListItems[1].querySelector('.nav__link').classList.add(navItemActive);
+        }
+
+        if (portfolioAnchor.getBoundingClientRect().top < 95 && portfolioAnchor.getBoundingClientRect().top > -775) {
+            removeActiveAttribute();
+            navListItems[2].querySelector('.nav__link').classList.add(navItemActive);
+        }
+
+        if (aboutUsAnchor.getBoundingClientRect().top < 95 && aboutUsAnchor.getBoundingClientRect().top > -641) {
+            removeActiveAttribute();
+            navListItems[3].querySelector('.nav__link').classList.add(navItemActive);
+        }
+
+        if (formAnchor.getBoundingClientRect().top < 93) {
+            removeActiveAttribute();
+            navListItems[4].querySelector('.nav__link').classList.add(navItemActive);
+        }
+
+    */
+
+    //header nav controll
+    const navListItems = document.querySelectorAll('.nav__list-item');
+
+    const sliderAnchor = document.querySelector('.slider-section');
+    const infoAnchor = document.querySelector('.info-section');
+    const portfolioAnchor = document.querySelector('.portoflio-section');
+    const aboutUsAnchor = document.querySelector('.about-us-section');
+    const formAnchor = document.querySelector('.form-section');
+    const navItemActive = 'nav__link--active';
+
+    function removeActiveAttribute() {
+        navListItems.forEach((it) => {
+            it.querySelector('.nav__link').classList.remove(navItemActive);
+        })
+    }
+
+    document.addEventListener('scroll', (evt)=> {
+        console.log(portfolioAnchor.offsetTop);
+        //console.log(formAnchor.getBoundingClientRect());
+
+        if (sliderAnchor.getBoundingClientRect().top < 100 && aboutUsAnchor.getBoundingClientRect().top > -500) {
+            removeActiveAttribute();
+            navListItems[0].querySelector('.nav__link').classList.add(navItemActive);
+        }
+
+        if (infoAnchor.getBoundingClientRect().top < 100 && infoAnchor.getBoundingClientRect().top > -420) {
+            removeActiveAttribute();
+            navListItems[1].querySelector('.nav__link').classList.add(navItemActive);
+        }
+
+        if (portfolioAnchor.getBoundingClientRect().top < 95 && portfolioAnchor.getBoundingClientRect().top > -775) {
+            removeActiveAttribute();
+            navListItems[2].querySelector('.nav__link').classList.add(navItemActive);
+        }
+
+        if (aboutUsAnchor.getBoundingClientRect().top < 95 && aboutUsAnchor.getBoundingClientRect().top > -641) {
+            removeActiveAttribute();
+            navListItems[3].querySelector('.nav__link').classList.add(navItemActive);
+        }
+
+        if (formAnchor.getBoundingClientRect().top < 93) {
+            removeActiveAttribute();
+            navListItems[4].querySelector('.nav__link').classList.add(navItemActive);
+        }
+
+    });
+    
+    
+    
     //slider
     const rowLeft = document.getElementById('row-left');
     const rowRight = document.getElementById('row-right');
