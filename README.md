@@ -1,3 +1,3 @@
 # singolo
 
-singolo:[https://koptohhka.github.io/singolo/]
+[singolo]:https://koptohhka.github.io/singolo/
