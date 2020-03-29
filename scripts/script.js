@@ -15,7 +15,6 @@
     }
 
     document.addEventListener('scroll', (evt)=> {
-        console.log(portfolioAnchor.offsetTop);
         //console.log(formAnchor.getBoundingClientRect());
 
         if (sliderAnchor.getBoundingClientRect().top < 100 && aboutUsAnchor.getBoundingClientRect().top > -500) {
@@ -175,8 +174,8 @@
 
     let toAddBorder = (targetElement) => {
         imagesListItem.forEach((it) => {
-            if (it.querySelector('img').classList.contains('image-list__image--border')) {
-                it.querySelector('img').classList.remove('image-list__image--border');
+            if (it.classList.contains('image-list__image--border')) {
+                it.classList.remove('image-list__image--border');
             }
         });
         targetElement.classList.add('image-list__image--border');
@@ -184,7 +183,7 @@
     
     imageList.addEventListener('click', (evt) => {
         if (evt.target.classList.contains('image-list__image')) {
-            toAddBorder(evt.target);
+            toAddBorder(evt.target.parentNode);
         }
     });
 
@@ -206,8 +205,8 @@
         `<div class="popup-shadow">
         <div class="popup">
         <p>Письмо отправлено</p>
-        <p>Тема: ${subject}</p>
-        <p>${describe}</p>
+        <p class="popup-text">Тема: ${subject}</p>
+        <p class="popup-text">${describe}</p>
         <button class="popup__button">ОК</button>
         </div>
         </div>`;

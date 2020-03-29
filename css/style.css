@@ -535,7 +535,6 @@
 .image-list__list-item {
     margin-right: 20px;
     margin-bottom: 17px;
-    transition-delay: 2s;
     transition: 0.3s;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
@@ -545,13 +544,8 @@
 
 .image-list__image {
     z-index: -5;
-
+    display: block;
     cursor: pointer;
-    transition: 0.1s;
-    -webkit-transition: 0.1s;
-    -moz-transition: 0.1s;
-    -ms-transition: 0.1s;
-    -o-transition: 0.1s;
 }
 
 .image-list__image--border {
@@ -725,6 +719,7 @@
     border: none;
     background-color: #d6564f;
     color: #f48c8f;
+    text-align: center;
 
     transition: 0.3s;
     border-radius: 4px;
@@ -915,6 +910,8 @@
     background-color: #ec746c;
     z-index: 10;
     color: white;
+
+    overflow: auto;
 }
 
 .popup-shadow {
@@ -923,6 +920,8 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
     z-index: 9;
+    color: white;
+    text-align: center;
 }
 
 .popup {
@@ -930,12 +929,25 @@
     padding-left: 10px;
     padding-right: 10px;
     position: fixed;
-    top: 40%;
-    left: 40%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
     width: 300px;
     background-color: #ec746c;
     z-index: 10;
-    color: white;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.popup-text {
+    max-width: 270px;
+    word-break: break-all;
+    margin-top: 3px;
 }
 
 .popup__button {
@@ -946,6 +958,16 @@
     border: none;
     margin: 0 auto;
     cursor: pointer;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
 }
 
 @media (max-width: 1020px) and (min-width: 768px) {
@@ -1257,6 +1279,7 @@
 
     .form-article__form-container {
         display: block;
+        padding-bottom: 20px;
     }
 
     .main-form__text-input {
@@ -1266,6 +1289,18 @@
     .main-form__button {
         width: 100%;
         text-align: center;
+    }
+
+    .main-form__form-group {
+        margin-right: 0px;
+    }
+
+    .footer {
+        padding-bottom: 15px;
+    }
+
+    .footer__copyright {
+        display: none;
     }
 
 
@@ -1315,13 +1350,17 @@
             height: 220px;
         }
 
+        .info-section__list-description {
+            max-width: 180px;
+        }
+
         .portoflio-section__image-list {
             width: 84%;
         }
 
         .portoflio-section__image-list .image-list__list-item {
             width: 45%;
-            margin-right: 13px; 
+            margin-right: 13px;
         }
 
         .image-list__image {
@@ -1342,6 +1381,38 @@
 
         .images-container__image {
             width: 100%;
+        }
+
+        @media(max-width: 407px) {
+            .slider-section__slider-item {
+                height: 200px;
+            }
+
+            .slider-section__image-one {
+                height: 178px;
+                width: 71px;
+                left: 22px;
+            }
+
+            .slider-section__image-two {
+                height: 71px;
+                width: 178px;
+                left: 110px;
+            }
+
+            .black-vertical {
+                width: 56px;
+                top: 19px;
+                left: 4px;
+                height: 99px;
+            }
+
+            .black-horizontal {
+                width: 99px;
+                top: 19px;
+                left: 4px;
+                height: 56px;
+            }
         }
     }
 }
